@@ -1,0 +1,52 @@
+[
+  {
+    "id": "001",
+    "fecha": "15/03/2026",
+    "titulo": "Inicio del diario de aprendizaje",
+    "tipo": "reflexión",
+    "unidad": "Unidad 0",
+    "contenido": "Hoy doy comienzo a mi diario de aprendizaje para el curso sobre Proyecto Intermodular en FP, organizado por Conecta13 / Dualiza. Este espacio será mi cuaderno de bitácora: un lugar donde recoger reflexiones, retos, actividades y evidencias de todo lo que vaya aprendiendo y construyendo a lo largo del curso. Como coordinadora del Aula de Emprendimiento en el IES Marc Ferrer de Formentera y líder de Balears Digital Boost, tengo claro que mi proyecto intermodular va a nacer de la realidad: voy a convertir en PI el proyecto de innovación real que estamos desarrollando con otro instituto y el IES Sa Colomina.",
+    "etiquetas": ["#ProyectoIntermodularDualiza", "#BalearsDigitalBoost", "#inicio"],
+    "imagen": null
+  },
+  {
+    "id": "002",
+    "fecha": "15/03/2026",
+    "titulo": "El Proyecto Intermodular es... depende de a quién preguntes",
+    "tipo": "reto",
+    "unidad": "Unidad 1",
+    "contenido": "Reto 1 — Encuesta: ¿Qué es el Proyecto Intermodular en tu centro? En el IES Marc Ferrer la respuesta sincera es: depende del ciclo y del profesor. No hay un criterio común. En algunos ciclos se percibe como una integración real de módulos; en otros, como un trabajo final que el alumnado entrega casi por obligación. Y en muchos casos, simplemente depende de la voluntad individual de cada docente. Esta falta de criterio compartido es precisamente lo que me ha empujado a hacer este curso. Necesitamos pasar de la improvisación al diseño intencionado. Un PI debería ser mucho más que una memoria con presentación: debería ser la oportunidad de que el alumnado resuelva un problema real conectando lo que aprende en distintos módulos. ¿Qué es lo que más cuesta en mi centro? La coordinación entre docentes. Cada uno trabaja su módulo de forma aislada, y encontrar espacios (y voluntades) para diseñar algo conjunto requiere un esfuerzo que a menudo nadie lidera. También la definición del reto: sin una pregunta potente que vertebre el proyecto, el resultado acaba siendo un collage de tareas desconectadas. Este curso es una oportunidad para cambiar esto, al menos en mi ámbito.",
+    "etiquetas": ["#ProyectoIntermodularDualiza", "#Reto1", "#coordinación", "#IESMarcFerrer"],
+    "imagen": null
+  },
+  {
+    "id": "003",
+    "fecha": "15/03/2026",
+    "titulo": "Marco normativo del PI en las Illes Balears",
+    "tipo": "actividad",
+    "unidad": "Unidad 1",
+    "contenido": "Actividad 1 — Investigación de la normativa autonómica sobre el Proyecto Intermodular. He rastreado la normativa que afecta a la programación del módulo de Proyecto Intermodular en las Illes Balears. Aquí recojo los hallazgos principales y mis reflexiones.",
+    "etiquetas": ["#ProyectoIntermodularDualiza", "#normativa", "#IllesBalears", "#Decreto39"],
+    "imagen": null
+  },
+  {
+    "id": "004",
+    "fecha": "15/03/2026",
+    "titulo": "Esto va a ser un reto, no un proyecto",
+    "tipo": "reto",
+    "unidad": "Unidad 2",
+    "contenido": "Reto 2 — ¿Un proyecto o un reto? Lo tengo claro: mi propuesta metodológica es un RETO. Balears Digital Boost no encaja en la lógica de un proyecto cerrado con entregables predefinidos. Es un problema abierto y real: ¿cómo pueden los estudiantes de Gestión Administrativa ayudar a las microempresas de Ibiza y Formentera a dar el salto digital? Este reto requiere investigación (diagnosticar las necesidades reales de los comercios locales), toma de decisiones (qué servicios digitales priorizar, cómo comunicarse con empresarios que no dominan la tecnología) e impacto real (los resultados se aplican en negocios reales, no se quedan en un aula). Los módulos implicados son Digitalización, Técnica Contable y Comunicación, y el alumnado del GM de Gestión Administrativa del IES Marc Ferrer trabajará en colaboración con el IES Sa Colomina. La clave de elegir el formato reto es que el producto final no está cerrado de antemano: puede ser un plan de digitalización, una campaña de sensibilización, una guía práctica, o una combinación de todo ello. Lo que importa es que el alumnado se enfrente a la incertidumbre, investigue, decida y actúe — como harán en su vida profesional.",
+    "etiquetas": ["#ProyectoIntermodularDualiza", "#Reto2", "#BalearsDigitalBoost", "#ABR", "#retoreal"],
+    "imagen": null
+  },
+  {
+    "id": "005",
+    "fecha": "15/03/2026",
+    "titulo": "Canvas del Proyecto Intermodular: Balears Digital Boost",
+    "tipo": "canvas",
+    "unidad": "Unidad 2",
+    "contenido": "Actividad 2 — Primer esbozo del PI usando el Canvas de 10 bloques. Ciclo: GM Gestión Administrativa (1.º). Curso: 2025-2026. Módulos implicados: Digitalización aplicada al sistema productivo (DASP), Técnica Contable (TC) y Comunicación Empresarial y Atención al Cliente (CEAC).",
+    "etiquetas": ["#ProyectoIntermodularDualiza", "#canvas", "#BalearsDigitalBoost", "#IESSaColomina", "#diseñoPI"],
+    "imagen": null
+  }
+]
