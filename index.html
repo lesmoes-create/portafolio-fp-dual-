@@ -3,447 +3,340 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio — Carmen Maria Moles | Proyecto Intermodular FP Dual</title>
+  <title>Carmen Maria Moles · Portafolio FP Dual</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --sand: #F5F0E8;
-      --sand-dark: #E8E0D0;
-      --terracotta: #C4785B;
-      --terracotta-light: #D4967E;
-      --blue-med: #2E6B8A;
-      --blue-light: #4A9BBF;
-      --ink: #2C2C2C;
-      --ink-soft: #5A5A5A;
-      --white: #FEFCF9;
-      --card-shadow: 0 2px 20px rgba(44, 44, 44, 0.06);
-      --card-shadow-hover: 0 6px 30px rgba(44, 44, 44, 0.1);
+      --bg: #0B0B0F;
+      --bg-card: #141419;
+      --bg-card-hover: #1A1A22;
+      --amber: #E8A849;
+      --amber-soft: rgba(232, 168, 73, 0.15);
+      --amber-glow: rgba(232, 168, 73, 0.06);
+      --white: #F2F0ED;
+      --white-soft: #B5B2AD;
+      --white-muted: #807D78;
+      --border: rgba(255,255,255,0.06);
+      --gradient-amber: linear-gradient(135deg, #E8A849, #D4783C);
+      --reto: #E8A849;
+      --actividad: #4A9BBF;
+      --reflexion: #9B7EC8;
+      --canvas: #5BBF8E;
+      --recurso: #D4783C;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 18px; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--sand);
-      color: var(--ink);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── HEADER ── */
-    .hero {
-      background: linear-gradient(135deg, var(--white) 0%, var(--sand) 50%, var(--sand-dark) 100%);
-      padding: 5rem 2rem 4rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(46, 107, 138, 0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--terracotta-light), transparent);
-    }
-
-    .hero-overline {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      margin-bottom: 1.2rem;
-    }
-
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.1;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--blue-med);
-      font-weight: 400;
-    }
-
-    .hero-subtitle {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-style: italic;
-      color: var(--ink-soft);
-      margin-bottom: 2rem;
-    }
-
-    .hero-bio {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 0.95rem;
-      color: var(--ink-soft);
-      line-height: 1.8;
-    }
-
-    .hero-tags {
-      display: flex;
-      gap: 0.6rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 1.8rem;
-    }
-
-    .hero-tag {
-      background: var(--white);
-      border: 1px solid var(--sand-dark);
-      padding: 0.35rem 1rem;
-      border-radius: 100px;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--ink-soft);
-      transition: all 0.3s ease;
-    }
-
-    .hero-tag:hover {
-      border-color: var(--terracotta);
-      color: var(--terracotta);
-    }
-
-    /* ── NAV / FILTER ── */
-    .filter-bar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(245, 240, 232, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      border-bottom: 1px solid var(--sand-dark);
-    }
-
-    .filter-btn {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.4rem 1.1rem;
-      border-radius: 100px;
-      border: 1px solid var(--sand-dark);
-      background: transparent;
-      color: var(--ink-soft);
-      cursor: pointer;
-      transition: all 0.25s ease;
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: var(--ink);
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
       color: var(--white);
-      border-color: var(--ink);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* ── MAIN CONTENT ── */
+    .glow-top {
+      position: fixed; top: -300px; right: -200px;
+      width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,168,73,0.04) 0%, transparent 70%);
+      pointer-events: none; z-index: 0;
+    }
+    .glow-bottom {
+      position: fixed; bottom: -400px; left: -200px;
+      width: 800px; height: 800px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,120,60,0.03) 0%, transparent 70%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; justify-content: center;
+      gap: 3.5rem; max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 3.5rem;
+    }
+    .hero-photo {
+      flex-shrink: 0; width: 240px; height: 240px;
+      border-radius: 50%; overflow: hidden;
+      border: 3px solid rgba(232,168,73,0.3);
+      box-shadow: 0 0 60px rgba(232,168,73,0.08), 0 0 120px rgba(232,168,73,0.04);
+      animation: fadeIn 1s ease;
+    }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .hero-text { animation: slideIn 0.8s ease; }
+    .hero-overline {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 0.8rem;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 700;
+      line-height: 1.15; margin-bottom: 0.3rem;
+    }
+    .hero-text h1 .accent { font-style: italic; font-weight: 400; color: var(--amber); }
+    .hero-subtitle {
+      font-family: 'Playfair Display', serif; font-size: 1.05rem;
+      font-style: italic; color: var(--white-soft); margin-bottom: 1.2rem;
+    }
+    .hero-bio {
+      font-size: 0.95rem; color: var(--white-muted);
+      max-width: 500px; line-height: 1.75; margin-bottom: 1.5rem;
+    }
+    .hero-chips { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+    .chip {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em;
+      padding: 0.3rem 0.8rem; border-radius: 100px;
+      border: 1px solid var(--border); color: var(--white-soft);
+      background: transparent; transition: all 0.3s ease;
+    }
+    .chip:hover { border-color: var(--amber); color: var(--amber); background: var(--amber-soft); }
+
+    .divider {
+      max-width: 1100px; margin: 0 auto; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    /* ── FILTER BAR ── */
+    .filter-bar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(11,11,15,0.88);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      padding: 0.9rem 2rem; display: flex; justify-content: center;
+      gap: 0.4rem; flex-wrap: wrap; border-bottom: 1px solid var(--border);
+    }
+    .filter-btn {
+      font-family: 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 500;
+      padding: 0.4rem 1.1rem; border-radius: 100px;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--white-muted); cursor: pointer; transition: all 0.25s ease;
+    }
+    .filter-btn:hover { border-color: var(--amber); color: var(--amber); }
+    .filter-btn.active {
+      background: var(--gradient-amber); color: var(--bg);
+      border-color: transparent; font-weight: 600;
+    }
+
+    /* ── MAIN ── */
     .container {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 3rem 2rem 5rem;
+      position: relative; z-index: 1;
+      max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem 5rem;
     }
-
-    .section-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--terracotta);
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
       margin-bottom: 2rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid var(--sand-dark);
     }
-
-    /* ── ENTRY CARDS ── */
-    .entries {
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
+    .section-title {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--amber);
     }
+    .section-count { font-size: 0.88rem; color: var(--white-muted); }
+    .section-count strong { color: var(--white); }
 
+    /* ── CARDS ── */
+    .entries { display: flex; flex-direction: column; gap: 1.4rem; }
     .entry {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 2rem 2.2rem;
-      box-shadow: var(--card-shadow);
-      transition: all 0.35s ease;
-      position: relative;
-      overflow: hidden;
-      animation: fadeInUp 0.5s ease forwards;
-      opacity: 0;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 2rem 2.2rem;
+      transition: all 0.35s ease; position: relative; overflow: hidden;
+      animation: fadeInUp 0.5s ease forwards; opacity: 0;
+      scroll-margin-top: 5rem;
     }
-
     .entry:hover {
-      box-shadow: var(--card-shadow-hover);
+      background: var(--bg-card-hover);
+      border-color: rgba(232,168,73,0.15);
       transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 30px var(--amber-glow);
     }
-
-    .entry::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      border-radius: 4px 0 0 4px;
+    .entry::after {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
     }
+    .entry[data-tipo="reto"]::after { background: linear-gradient(90deg, var(--reto), #D4A03C); }
+    .entry[data-tipo="actividad"]::after { background: linear-gradient(90deg, var(--actividad), #3D8AAD); }
+    .entry[data-tipo="reflexión"]::after { background: linear-gradient(90deg, var(--reflexion), #7E5CB8); }
+    .entry[data-tipo="canvas"]::after { background: linear-gradient(90deg, var(--canvas), #3DA876); }
+    .entry[data-tipo="recurso"]::after { background: linear-gradient(90deg, var(--recurso), #E8A849); }
 
-    .entry[data-tipo="reflexión"]::before { background: var(--blue-med); }
-    .entry[data-tipo="material"]::before { background: var(--terracotta); }
-    .entry[data-tipo="recurso"]::before { background: #6B8E5B; }
-    .entry[data-tipo="imagen"]::before { background: #9B7EC8; }
-    .entry[data-tipo="actividad"]::before { background: #D4A03C; }
-
-    .entry-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1rem;
+    .entry-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.9rem; }
+    .entry-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+    .entry-date { font-size: 0.82rem; color: var(--white-muted); font-weight: 500; }
+    .entry-badge {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.22rem 0.75rem; border-radius: 100px;
     }
+    .entry[data-tipo="reto"] .entry-badge { background: rgba(232,168,73,0.15); color: var(--reto); }
+    .entry[data-tipo="actividad"] .entry-badge { background: rgba(74,155,191,0.15); color: var(--actividad); }
+    .entry[data-tipo="reflexión"] .entry-badge { background: rgba(155,126,200,0.15); color: var(--reflexion); }
+    .entry[data-tipo="canvas"] .entry-badge { background: rgba(91,191,142,0.15); color: var(--canvas); }
+    .entry[data-tipo="recurso"] .entry-badge { background: rgba(212,120,60,0.15); color: var(--recurso); }
 
-    .entry-icon {
-      font-size: 1.5rem;
-      line-height: 1;
-      flex-shrink: 0;
+    .entry-icon { font-size: 1.3rem; opacity: 0.7; }
+    .entry-unit {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em;
+      color: var(--white-muted); border: 1px solid var(--border);
+      padding: 0.15rem 0.6rem; border-radius: 100px;
     }
-
-    .entry-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-
-    .entry-date {
-      font-size: 0.78rem;
-      color: var(--ink-soft);
-      font-weight: 500;
-    }
-
-    .entry-modulo {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      background: rgba(196, 120, 91, 0.08);
-      padding: 0.2rem 0.7rem;
-      border-radius: 100px;
-    }
-
     .entry h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.3;
-      margin-bottom: 0.8rem;
+      font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+      color: var(--white); line-height: 1.35; margin-bottom: 0.8rem;
     }
-
-    .entry-content {
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-      line-height: 1.85;
+    .entry h3 a {
+      color: inherit; text-decoration: none;
     }
-
-    .entry-tags {
-      display: flex;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      margin-top: 1.2rem;
-    }
-
+    .entry h3 a:hover { color: var(--amber); }
+    .entry-content { font-size: 1rem; color: var(--white-soft); line-height: 1.85; }
+    .entry-content p + p { margin-top: 0.8rem; }
+    .entry-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 1.2rem; }
     .entry-tag {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--blue-med);
-      background: rgba(46, 107, 138, 0.07);
-      padding: 0.2rem 0.65rem;
-      border-radius: 100px;
+      font-size: 0.72rem; font-weight: 500; color: var(--white-muted);
+      border: 1px solid var(--border); padding: 0.18rem 0.65rem;
+      border-radius: 100px; transition: all 0.2s ease;
     }
+    .entry-tag:hover { color: var(--amber); border-color: rgba(232,168,73,0.3); }
+
+    /* ── PERMALINK ── */
+    .entry-permalink {
+      position: absolute; top: 1.2rem; right: 1.2rem;
+      font-size: 0.75rem; color: var(--white-muted);
+      text-decoration: none; opacity: 0; transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+    .entry:hover .entry-permalink { opacity: 1; }
+    .entry-permalink:hover { color: var(--amber); }
 
     /* ── FOOTER ── */
     footer {
-      text-align: center;
-      padding: 3rem 2rem;
-      font-size: 0.8rem;
-      color: var(--ink-soft);
-      border-top: 1px solid var(--sand-dark);
+      position: relative; z-index: 1; text-align: center; padding: 3rem 2rem;
+      font-size: 0.85rem; color: var(--white-muted); border-top: 1px solid var(--border);
     }
+    footer a { color: var(--amber); text-decoration: none; }
+    footer .footer-line { margin-top: 0.3rem; }
 
-    footer a {
-      color: var(--terracotta);
-      text-decoration: none;
-    }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .entry:nth-child(1) { animation-delay: 0.1s; }
     .entry:nth-child(2) { animation-delay: 0.2s; }
     .entry:nth-child(3) { animation-delay: 0.3s; }
-    .entry:nth-child(4) { animation-delay: 0.4s; }
-    .entry:nth-child(5) { animation-delay: 0.5s; }
+    .entry:nth-child(4) { animation-delay: 0.35s; }
+    .entry:nth-child(5) { animation-delay: 0.4s; }
 
-    /* ── EMPTY STATE ── */
-    .empty-state {
-      text-align: center;
-      padding: 4rem 2rem;
-      color: var(--ink-soft);
+    /* ── TOAST ── */
+    .toast {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(100px);
+      background: var(--amber); color: var(--bg); padding: 0.7rem 1.5rem;
+      border-radius: 100px; font-size: 0.85rem; font-weight: 600;
+      z-index: 999; transition: transform 0.3s ease; pointer-events: none;
     }
+    .toast.show { transform: translateX(-50%) translateY(0); }
 
-    .empty-state p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-style: italic;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      .hero { padding: 3.5rem 1.5rem 3rem; }
-      .container { padding: 2rem 1.2rem 4rem; }
-      .entry { padding: 1.5rem 1.5rem; }
-      .entry h3 { font-size: 1.35rem; }
-      .entry-header { flex-direction: column; gap: 0.5rem; }
-    }
-
-    /* ── COUNTER ── */
-    .counter {
-      text-align: center;
-      margin-bottom: 0.5rem;
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-    }
-
-    .counter strong {
-      color: var(--ink);
+    @media (max-width: 768px) {
+      html { font-size: 16px; }
+      .hero { flex-direction: column; text-align: center; padding: 3.5rem 1.5rem 2.5rem; gap: 1.8rem; }
+      .hero-photo { width: 170px; height: 170px; }
+      .hero-bio { margin: 0 auto 1.2rem; }
+      .hero-chips { justify-content: center; }
+      .container { padding: 1.8rem 1.2rem 4rem; }
+      .entry { padding: 1.5rem 1.4rem; }
+      .entry h3 { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
+  <div class="glow-top"></div>
+  <div class="glow-bottom"></div>
 
-  <!-- ═══ HERO ═══ -->
   <header class="hero">
-    <p class="hero-overline">Portafolio de aprendizaje</p>
-    <h1>Carmen Maria <em>Moles</em></h1>
-    <p class="hero-subtitle">Proyecto Intermodular en FP Dual — Conecta13 / iZaid</p>
-    <p class="hero-bio">
-      Profesora de FP en Gestión Administrativa en el IES Marc Ferrer, Formentera. 
-      Coordinadora de NEXO FP Balears. Comprometida con la innovación educativa 
-      y la integración de la IA en el aula para hacer del aprendizaje una experiencia 
-      más conectada, real y significativa.
-    </p>
-    <div class="hero-tags">
-      <span class="hero-tag">FP Dual</span>
-      <span class="hero-tag">Gestión Administrativa</span>
-      <span class="hero-tag">Innovación Educativa</span>
-      <span class="hero-tag">Formentera</span>
-      <span class="hero-tag">NEXO FP</span>
+    <div class="hero-photo">
+      <img src="PIC_CMM.png" alt="Carmen Maria Moles">
+    </div>
+    <div class="hero-text">
+      <p class="hero-overline">Diario de aprendizaje</p>
+      <h1>Carmen Maria <span class="accent">Moles</span></h1>
+      <p class="hero-subtitle">Proyecto Intermodular en FP · Conecta13 / Dualiza</p>
+      <p class="hero-bio">
+        Profesora de FP · Coordinadora del Aula de Emprendimiento del IES Marc Ferrer, Formentera. 
+        Líder de Balears Digital Boost. Ex-consultora SAP FI-CO. 
+        Formación internacional en Laurea (Finlandia) y Kaospilot (Dinamarca).
+      </p>
+      <div class="hero-chips">
+        <span class="chip">Aula de Emprendimiento</span>
+        <span class="chip">Balears Digital Boost</span>
+        <span class="chip">FP Dual</span>
+        <span class="chip">Innovación Educativa</span>
+        <span class="chip">NEXO FP Balears</span>
+        <span class="chip">Formentera</span>
+      </div>
     </div>
   </header>
 
-  <!-- ═══ FILTERS ═══ -->
+  <div class="divider"></div>
+
   <nav class="filter-bar">
     <button class="filter-btn active" data-filter="all">Todas</button>
-    <button class="filter-btn" data-filter="reflexión">💭 Reflexiones</button>
-    <button class="filter-btn" data-filter="material">📄 Materiales</button>
-    <button class="filter-btn" data-filter="recurso">🔗 Recursos</button>
-    <button class="filter-btn" data-filter="imagen">📸 Imágenes</button>
+    <button class="filter-btn" data-filter="reto">🎯 Retos</button>
     <button class="filter-btn" data-filter="actividad">⚡ Actividades</button>
+    <button class="filter-btn" data-filter="reflexión">💭 Reflexiones</button>
+    <button class="filter-btn" data-filter="canvas">📐 Canvas</button>
+    <button class="filter-btn" data-filter="recurso">🔗 Recursos</button>
   </nav>
 
-  <!-- ═══ ENTRIES ═══ -->
   <main class="container">
-    <p class="counter"><strong id="count">1</strong> evidencia(s) de aprendizaje</p>
-    <p class="section-label">Bitácora de aprendizaje</p>
+    <div class="section-header">
+      <span class="section-title">Diario de aprendizaje</span>
+      <span class="section-count"><strong id="count">1</strong> entrada(s)</span>
+    </div>
 
     <div class="entries" id="entries">
 
       <!-- ENTRADA 001 -->
-      <article class="entry" data-tipo="reflexión" data-tags="inicio,presentación">
-        <div class="entry-header">
+      <article class="entry" data-tipo="reflexión" id="entrada-001">
+        <span class="entry-permalink" onclick="copyLink('entrada-001')" title="Copiar enlace">🔗</span>
+        <div class="entry-top">
           <div class="entry-meta">
             <span class="entry-date">15/03/2026</span>
-            <span class="entry-modulo">Presentación</span>
+            <span class="entry-badge">Reflexión</span>
+            <span class="entry-unit">Unidad 0</span>
           </div>
           <span class="entry-icon">💭</span>
         </div>
-        <h3>Inicio del portafolio</h3>
+        <h3><a href="#entrada-001">Inicio del diario de aprendizaje</a></h3>
         <div class="entry-content">
-          <p>Hoy doy comienzo a mi portafolio de aprendizaje para el curso sobre Proyecto Intermodular en FP Dual, organizado por Conecta13 con metodología iZaid. Este espacio será mi cuaderno de bitácora: un lugar donde recoger reflexiones, materiales, recursos y evidencias de todo lo que vaya aprendiendo y construyendo a lo largo del curso.</p>
-          <p style="margin-top:0.8rem;">Como profesora de FP en Gestión Administrativa en el IES Marc Ferrer de Formentera, y coordinadora de NEXO FP Balears, llego a este curso con muchas ganas de seguir explorando cómo hacer que la formación profesional sea más conectada, más real y más significativa para el alumnado.</p>
+          <p>Hoy doy comienzo a mi diario de aprendizaje para el curso sobre Proyecto Intermodular en FP, organizado por Conecta13 / Dualiza. Este espacio será mi cuaderno de bitácora: un lugar donde recoger reflexiones, retos, actividades y evidencias de todo lo que vaya aprendiendo y construyendo a lo largo del curso.</p>
+          <p>Como coordinadora del Aula de Emprendimiento en el IES Marc Ferrer de Formentera y líder de Balears Digital Boost, tengo claro que mi proyecto intermodular va a nacer de la realidad: voy a convertir en PI el proyecto de innovación real que estamos desarrollando con otro instituto y el IES Sa Colomina.</p>
         </div>
         <div class="entry-tags">
+          <span class="entry-tag">#ProyectoIntermodularDualiza</span>
+          <span class="entry-tag">#BalearsDigitalBoost</span>
           <span class="entry-tag">#inicio</span>
-          <span class="entry-tag">#presentación</span>
         </div>
       </article>
 
     </div>
   </main>
 
-  <!-- ═══ FOOTER ═══ -->
   <footer>
-    <p>Portafolio de Carmen Maria Moles Moles · IES Marc Ferrer, Formentera</p>
-    <p style="margin-top:0.4rem;">Curso Proyecto Intermodular FP Dual · <a href="https://conecta13.com" target="_blank">Conecta13</a> / iZaid · 2026</p>
+    <p>Carmen Maria Moles Moles · IES Marc Ferrer, Formentera</p>
+    <p class="footer-line">Proyecto Intermodular FP · <a href="https://conecta13.com" target="_blank">Conecta13</a> / Dualiza · 2026 · #ProyectoIntermodularDualiza</p>
   </footer>
 
-  <!-- ═══ FILTER LOGIC ═══ -->
+  <!-- TOAST for permalink copy -->
+  <div class="toast" id="toast">Enlace copiado ✓</div>
+
   <script>
+    // Filters
     document.addEventListener('DOMContentLoaded', () => {
       const buttons = document.querySelectorAll('.filter-btn');
       const entries = document.querySelectorAll('.entry');
       const counter = document.getElementById('count');
-
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
           buttons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-
           const filter = btn.dataset.filter;
           let visible = 0;
-
           entries.forEach(entry => {
             if (filter === 'all' || entry.dataset.tipo === filter) {
               entry.style.display = '';
@@ -452,12 +345,20 @@
               entry.style.display = 'none';
             }
           });
-
           counter.textContent = visible;
         });
       });
     });
-  </script>
 
+    // Copy permalink
+    function copyLink(id) {
+      const url = window.location.origin + window.location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
+      });
+    }
+  </script>
 </body>
 </html>
